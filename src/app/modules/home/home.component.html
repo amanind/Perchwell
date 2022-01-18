@@ -1,0 +1,51 @@
+<div class="bodyContainer">
+    <div class="row">
+        Sort By: Most Expensive
+    </div>
+	<div class="row">
+		<div class="col-4" *ngFor="let list of displayListing; let i=index">
+            <div class="listingBg" [ngStyle]="{'background': 'url('+list.media.large_image_list[0]+')', 'background-position':'center', 'background-size' :'contain' }">
+                <div class="blackBg lisitngDetails_height">
+                    <span>
+                        {{list?.listing_details?.status}}
+                    </span>
+                </div>
+                <div class="openHouse lisitngDetails_height">
+                    <span *ngIf="list?.open_house">
+                        {{list?.open_house[0]?.start_time}}
+                    </span>
+                </div>
+                <div class="blackBg lisitngDetails_height">
+                    <span *ngIf=list?.feature?.new_development>
+                        New Development
+                    </span>
+                </div>
+                <div class="unit-address lisitngDetails_height align-items-end" *ngIf=list?.location?.address_with_unit>
+                    <span>
+                        {{list?.location?.address_with_unit}}
+                    </span>
+                </div>
+                <div class="unit-details lisitngDetails_height align-items-end" *ngIf=list?.listing_details>
+                    <span>
+                        $ {{list?.listing_details?.current_price}} / mo   {{ list?.unit_details?.beds }} BD  | {{ list?.unit_details?.full_baths + list?.unit_details?.half_baths }} BA
+                    </span>
+                </div>
+                <div class="unit-type lisitngDetails_height align-items-end" *ngIf=list?.location>
+                    <span>
+                        {{list?.location?.place}} {{ list?.unit_details?.property_type }}
+                    </span>
+                </div>
+            </div>
+        </div>
+	</div>
+    <div class="row">
+        <mat-paginator
+            (page)="handlePageEvent($event)"
+            [length]="totalCount"
+            [pageSize]="pageSize"
+            [showFirstLastButtons]="true"
+            [pageSizeOptions]="false"
+            aria-label="Select page">
+        </mat-paginator>
+    </div>
+</div>

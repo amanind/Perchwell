@@ -1,0 +1,106 @@
+/* You can add global styles to this file, and also import other style files */
+$font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+
+$p-footer-medium: 0.7em;
+$p-footer-large: 1em;
+$p-footer-small: 0.6em;
+$res-min: 320px;
+
+$theme-red: #e02020;
+$theme-orange: #f17024;
+
+$default-text: #ffffff;
+$footer-background: #02bd50;
+$h2-color: #1b4677;
+
+$header-border-color: #707070;
+
+$md-radio-checked-color: #01579b;
+$md-radio-border-color:#5bc0de;
+$p-text-color: #666666;
+
+$header-bg: #4a4a4a;
+$openHouse-bg: #84f5a1;
+
+:root {
+    --listing-bg-img: brown;
+}
+
+.bodyContainer {
+	margin: 0 auto;
+	width: 85%;
+    position: relative;
+}
+/* header links */
+.perch-navbar {
+    background-color: #ffffff;
+}
+
+/** hero image **/
+.heroImg{
+    background-image: url(https://www.zillowstatic.com/s3/homepage/static/_Desktop_Overlay_ChangeStartsHere_HC@2x.webp);
+}
+
+.heroSizing {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 70%;
+    z-index: 0;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+}
+
+.heroText, .heroText:hover {
+    margin: 15% auto;
+    color: $default-text;
+}
+
+/* body */
+.main-container{
+	z-index: 5;
+	width: 100%;
+    margin-top: 38%;
+}
+
+/* listing */
+.listingBg {
+    /*background-image: var(url(--listing-bg-img));*/
+    padding: 10px;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 25px;
+}
+
+.lisitngDetails_height {
+    height:20px;
+}
+
+.blackBg span{
+    background-color: $header-bg;
+    color: $default-text;
+    padding: 0 5px;
+}
+
+.openHouse span {
+    background-color: $openHouse-bg;
+    color: $default-text;
+    padding: 0 5px;
+}
+
+.unit-address {
+    color: $default-text;
+    font-size: $p-footer-large;
+    margin-top: 120px;
+}
+
+.unit-details {
+    color: $default-text;
+    font-size: $p-footer-medium;
+}
+
+.unit-type {
+    color: $default-text;
+    font-size: $p-footer-small;
+}

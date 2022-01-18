@@ -1,0 +1,8 @@
+{
+    "/api/feeds/*": {
+        "target": "https://staging.perchwell.com",
+        "secure": true,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}
